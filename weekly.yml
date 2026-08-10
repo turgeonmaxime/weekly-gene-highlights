@@ -1,0 +1,50 @@
+# This file defines a GitHub Actions workflow. GitHub Actions runs jobs
+# on GitHub's own servers, on a schedule you define, so you don't need
+# to keep a computer or server running yourself.
+#
+# "on:" defines what triggers this workflow.
+# "jobs:" defines what happens when it's triggered.
+
+name: Gene of the Week
+
+on:
+  schedule:
+    # Cron syntax: minute hour day-of-month month day-of-week.
+    # "0 13 * * 1" = minute 0, hour 13, any day-of-month, any month,
+    # day-of-week 1 (Monday). GitHub Actions cron times are always UTC,
+    # not your local timezone - 13:00 UTC is 9:00 AM Eastern (during EDT)
+    # or 8:00 AM Eastern (during EST). Adjust the hour for your timezone
+    # and daylight saving, or accept a 1-hour drift twice a year.
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+    # This adds a manual "Run workflow" button in the GitHub Actions tab,
+    # so you can trigger a send immediately to test it without waiting
+    # for Monday.
+
+jobs:
+  send-gene:
+    runs-on: ubuntu-latest
+    steps:
+      # Downloads your repository's files onto the temporary machine
+      # running this job, so send_slack.py and genes.yaml are available.
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Installs Python on the temporary machine.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # PyYAML is the only non-standard-library dependency the script needs.
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      # Runs the script. SLACK_WEBHOOK_URL is pulled from GitHub's
+      # encrypted repository secrets (Settings -> Secrets and variables
+      # -> Actions), not committed to the repo - the webhook URL should
+      # never appear in plain text in version control.
+      - name: Send gene of the week to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python send_slack.py

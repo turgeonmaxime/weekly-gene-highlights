@@ -1,0 +1,427 @@
+# Gene-of-the-Week data file.
+# Add entries at the bottom in the order you want them sent.
+# The script sends them in list order, one per week, and loops back
+# to the top when it runs out. Nothing here is fetched automatically -
+# you write each entry yourself before it's needed.
+#
+# genecards_url and medlineplus_url are generated from the gene symbol.
+# BCR-ABL1 is a fusion gene, not a single locus, so its links point to
+# ABL1 instead - spot-check that one, and the list in general, before
+# relying on it.
+
+- gene: TP53
+  protein: p53, transcription factor
+  pathway: Cell cycle checkpoint / apoptosis (tumor suppressor)
+  disease: Li-Fraumeni syndrome (autosomal dominant); somatic mutations in >50% of cancers
+  mechanism: Loss-of-function mutations remove the brake on cell cycle progression after DNA damage, so damaged cells divide instead of arresting or dying.
+  connection: Reference point - most other tumor suppressors in this list will be compared back to p53's loss-of-function pattern.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53
+  medlineplus_url: https://medlineplus.gov/genetics/gene/tp53/
+- gene: RB1
+  protein: Retinoblastoma protein (pRb)
+  pathway: Cell cycle checkpoint (G1/S transition)
+  disease: Retinoblastoma (autosomal dominant, requires 2nd hit - classic two-hit hypothesis)
+  mechanism: pRb normally binds and inhibits E2F transcription factors, blocking S-phase entry. Loss of both alleles frees E2F, driving unchecked division.
+  connection: Same loss-of-function tumor-suppressor logic as TP53, but demonstrates the two-hit hypothesis explicitly.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=RB1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/rb1/
+- gene: KRAS
+  protein: K-Ras, small GTPase
+  pathway: RAS-MAPK signaling
+  disease: Somatic driver in pancreatic, colorectal, lung cancers
+  mechanism: Gain-of-function point mutations lock KRAS in its active GTP-bound state, so growth signaling fires continuously without an upstream trigger.
+  connection: First gain-of-function oncogene in the list - direct contrast to TP53/RB1's loss-of-function pattern.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=KRAS
+  medlineplus_url: https://medlineplus.gov/genetics/gene/kras/
+- gene: MYC
+  protein: c-Myc, transcription factor
+  pathway: Cell growth / proliferation gene regulation
+  disease: Burkitt lymphoma (via chromosomal translocation), amplified in many solid tumors
+  mechanism: Translocation places MYC under a highly active promoter (e.g. immunoglobulin locus), causing massive overexpression of a normal protein rather than a mutated one.
+  connection: A third way to activate an oncogene - not a point mutation like KRAS, but dysregulated expression via translocation.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYC
+  medlineplus_url: https://medlineplus.gov/genetics/gene/myc/
+- gene: MLH1
+  protein: MutL homolog 1, DNA mismatch repair
+  pathway: DNA mismatch repair
+  disease: Lynch syndrome (autosomal dominant predisposition to colorectal/endometrial cancer)
+  mechanism: Loss of mismatch repair lets replication errors accumulate uncorrected, producing microsatellite instability and a hypermutated genome.
+  connection: Different repair pathway than ATM below - mismatch repair (single-base errors) vs double-strand break repair.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=MLH1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/mlh1/
+- gene: ATM
+  protein: ATM kinase, DNA damage sensor
+  pathway: DNA double-strand break response
+  disease: Ataxia-telangiectasia (autosomal recessive)
+  mechanism: ATM normally senses double-strand breaks and activates p53 and cell cycle arrest. Its loss impairs both DNA repair and the checkpoint response, causing genomic instability and neurodegeneration.
+  connection: Links back to TP53 - ATM is one of the upstream activators of p53 in the DNA damage response.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATM
+  medlineplus_url: https://medlineplus.gov/genetics/gene/atm/
+- gene: CFTR
+  protein: Chloride channel
+  pathway: Ion transport across epithelial membranes
+  disease: Cystic fibrosis (autosomal recessive)
+  mechanism: Most common mutation (F508del) causes protein misfolding, so the channel is degraded before reaching the cell membrane, disrupting chloride/fluid transport and causing thick mucus buildup.
+  connection: First channelopathy in the list - mechanism is protein misfolding/trafficking failure, not a signaling or repair defect.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=CFTR
+  medlineplus_url: https://medlineplus.gov/genetics/gene/cftr/
+- gene: FBN1
+  protein: Fibrillin-1, extracellular matrix structural protein
+  pathway: Connective tissue / elastic fiber formation
+  disease: Marfan syndrome (autosomal dominant)
+  mechanism: Defective fibrillin disrupts elastic fiber assembly and also releases excess active TGF-beta, which independently damages vascular tissue.
+  connection: First structural-protein disease in the list, contrasts with CFTR's transport defect.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=FBN1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/fbn1/
+- gene: COL1A1
+  protein: Collagen type I, alpha chain
+  pathway: Connective tissue / bone matrix formation
+  disease: Osteogenesis imperfecta (autosomal dominant)
+  mechanism: Mutant collagen chains often still get incorporated into collagen triple helices, disrupting the whole structure - a dominant-negative effect rather than simple loss of one allele's product.
+  connection: Contrast with FBN1 - introduces the dominant-negative mechanism, different from FBN1's haploinsufficiency.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=COL1A1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/col1a1/
+- gene: PAH
+  protein: Phenylalanine hydroxylase
+  pathway: Amino acid metabolism
+  disease: Phenylketonuria (autosomal recessive)
+  mechanism: Enzyme deficiency blocks conversion of phenylalanine to tyrosine, so phenylalanine accumulates to neurotoxic levels - a small-molecule accumulation mechanism, not a structural or signaling defect.
+  connection: First 'toxic accumulation' mechanism in the list, distinct from every structural/signaling gene so far.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PAH
+  medlineplus_url: https://medlineplus.gov/genetics/gene/pah/
+- gene: HBB
+  protein: Beta-globin
+  pathway: Hemoglobin assembly / oxygen transport
+  disease: Sickle cell disease vs. beta-thalassemia (both autosomal recessive, same gene, different mutation types)
+  mechanism: 'Sickle cell: a point mutation changes one amino acid, producing HbS that polymerizes under low oxygen (gain of toxic function). Thalassemia: various mutations reduce or eliminate beta-globin production (loss of function).'
+  connection: Same gene producing two different disease mechanisms - useful contrast to genes where one mechanism type dominates.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=HBB
+  medlineplus_url: https://medlineplus.gov/genetics/gene/hbb/
+- gene: FMR1
+  protein: FMRP, RNA-binding protein
+  pathway: Synaptic protein translation regulation
+  disease: Fragile X syndrome (X-linked)
+  mechanism: CGG trinucleotide repeat expansion in the promoter region leads to gene silencing via DNA methylation, so the mechanism is a repeat expansion, not a point mutation or deletion.
+  connection: Introduces repeat-expansion mutations, a category not covered by any gene above.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=FMR1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/fmr1/
+- gene: APC
+  protein: Adenomatous polyposis coli, scaffold protein
+  pathway: Wnt signaling
+  disease: Familial adenomatous polyposis (autosomal dominant)
+  mechanism: APC normally marks beta-catenin for degradation. Loss-of-function mutations let beta-catenin accumulate and drive constant Wnt target gene transcription, producing hundreds of colon polyps.
+  connection: Loss-of-function tumor suppressor like TP53/RB1, but acting on a signaling pathway rather than the cell cycle directly.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=APC
+  medlineplus_url: https://medlineplus.gov/genetics/gene/apc/
+- gene: PTEN
+  protein: Phosphatase, lipid/protein phosphatase
+  pathway: PI3K-AKT signaling
+  disease: Cowden syndrome, PTEN hamartoma tumor syndrome (autosomal dominant)
+  mechanism: PTEN normally removes a phosphate from PIP3 to dampen PI3K-AKT signaling. Its loss leaves that growth/survival pathway constantly active.
+  connection: Another tumor suppressor whose target is a signaling pathway, comparable to APC's role in Wnt.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PTEN
+  medlineplus_url: https://medlineplus.gov/genetics/gene/pten/
+- gene: VHL
+  protein: Von Hippel-Lindau protein
+  pathway: Hypoxia response (HIF degradation)
+  disease: Von Hippel-Lindau disease - renal cell carcinoma, hemangioblastomas, pheochromocytoma
+  mechanism: VHL normally tags HIF (hypoxia-inducible factor) for destruction when oxygen is plentiful. Its loss leaves HIF stable even with normal oxygen, triggering blood-vessel growth signals as if the tissue were oxygen-starved.
+  connection: A tumor suppressor that acts through a protein-degradation pathway, similar in logic to APC/beta-catenin but on a completely different signaling axis.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=VHL
+  medlineplus_url: https://medlineplus.gov/genetics/gene/vhl/
+- gene: NF1
+  protein: Neurofibromin, RAS-GAP
+  pathway: RAS-MAPK signaling
+  disease: Neurofibromatosis type 1 (autosomal dominant)
+  mechanism: Neurofibromin normally switches RAS off by promoting GTP hydrolysis. Its loss leaves RAS active longer, similar in downstream effect to KRAS's activating mutation but reached by removing a brake instead of jamming the accelerator.
+  connection: Same pathway as KRAS (week 3) but the opposite mechanism - loss of a negative regulator instead of a gain-of-function mutation in the driver itself.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=NF1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/nf1/
+- gene: RET
+  protein: Receptor tyrosine kinase
+  pathway: Growth factor signaling
+  disease: Multiple endocrine neoplasia type 2, medullary thyroid carcinoma
+  mechanism: Gain-of-function mutations cause the receptor to signal continuously without its ligand bound, driving unchecked proliferation in endocrine tissue.
+  connection: A receptor tyrosine kinase gain-of-function gene, parallel to EGFR/ALK later in this list but inherited (germline) rather than acquired somatically.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=RET
+  medlineplus_url: https://medlineplus.gov/genetics/gene/ret/
+- gene: STK11
+  protein: Serine/threonine kinase (LKB1)
+  pathway: AMPK / cellular energy sensing
+  disease: Peutz-Jeghers syndrome
+  mechanism: LKB1 normally activates AMPK to restrain growth when cellular energy is low. Loss-of-function mutations remove this checkpoint, permitting polyp formation and increasing risk of several cancers.
+  connection: A tumor suppressor tied to metabolic sensing rather than DNA repair or classical growth signaling - a new sub-category.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=STK11
+  medlineplus_url: https://medlineplus.gov/genetics/gene/stk11/
+- gene: SMAD4
+  protein: Transcription factor, TGF-beta pathway mediator
+  pathway: TGF-beta signaling
+  disease: Juvenile polyposis syndrome
+  mechanism: SMAD4 carries the TGF-beta growth-inhibitory signal into the nucleus. Its loss removes that inhibitory signal, permitting overgrowth of intestinal tissue.
+  connection: TGF-beta pathway link to FBN1 (week 8), which causes disease partly through excess TGF-beta signaling - here the mechanism is the opposite, too little signal getting through.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=SMAD4
+  medlineplus_url: https://medlineplus.gov/genetics/gene/smad4/
+- gene: MUTYH
+  protein: Base excision repair glycosylase
+  pathway: DNA base excision repair
+  disease: MUTYH-associated polyposis (autosomal recessive)
+  mechanism: MUTYH normally corrects oxidative DNA damage (specifically 8-oxoG mispairing). Its loss lets these errors accumulate, particularly causing characteristic G-to-T mutations across the genome.
+  connection: A third DNA repair pathway alongside MLH1's mismatch repair (week 5) and ATM's double-strand break response (week 6) - base excision repair targets a different error type.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=MUTYH
+  medlineplus_url: https://medlineplus.gov/genetics/gene/mutyh/
+- gene: PALB2
+  protein: Partner and localizer of BRCA2
+  pathway: Homologous recombination DNA repair
+  disease: Hereditary breast and pancreatic cancer
+  mechanism: PALB2 physically bridges BRCA1 and BRCA2 at DNA break sites. Its loss disrupts this repair complex even when BRCA1/2 themselves are normal - a useful contrast for a gene you already know well.
+  connection: Directly extends your existing BRCA knowledge - PALB2 fails in the same repair pathway BRCA2 works in, without being BRCA2 itself.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PALB2
+  medlineplus_url: https://medlineplus.gov/genetics/gene/palb2/
+- gene: CHEK2
+  protein: Checkpoint kinase 2
+  pathway: DNA damage checkpoint signaling
+  disease: Moderate-risk hereditary breast cancer
+  mechanism: CHEK2 acts downstream of ATM in the same damage-response signal relay. Its most common risk variant only moderately raises cancer risk, unlike the high-penetrance mutations in BRCA1/2 or TP53.
+  connection: Sits in the same signaling relay as ATM (week 6) and p53 (week 1), and is a good example of a moderate- vs high-penetrance risk gene, a distinction worth knowing generally.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=CHEK2
+  medlineplus_url: https://medlineplus.gov/genetics/gene/chek2/
+- gene: EGFR
+  protein: Epidermal growth factor receptor, RTK
+  pathway: RTK / RAS-MAPK signaling
+  disease: Non-small cell lung cancer (somatic driver mutations)
+  mechanism: Activating mutations in the kinase domain make the receptor signal without its ligand. Clinically important because specific mutations predict response to targeted kinase-inhibitor drugs.
+  connection: Same broad receptor-tyrosine-kinase logic as RET, but this is a somatic driver you test for to choose therapy, not an inherited syndrome gene.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=EGFR
+  medlineplus_url: https://medlineplus.gov/genetics/gene/egfr/
+- gene: ALK
+  protein: Anaplastic lymphoma kinase, RTK
+  pathway: RTK signaling
+  disease: Non-small cell lung cancer, anaplastic large cell lymphoma (via gene fusion)
+  mechanism: A chromosomal rearrangement fuses ALK to another gene's promoter and dimerization domain, forcing constant kinase activity - fusion-driven activation, distinct from EGFR's point mutations.
+  connection: Third way to activate an oncogene in this list, alongside KRAS's point mutation (week 3) and MYC's translocation-driven overexpression (week 4) - here the fusion creates a permanently active novel protein, not just more of a normal one.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=ALK
+  medlineplus_url: https://medlineplus.gov/genetics/gene/alk/
+- gene: BCR-ABL1
+  protein: Fusion tyrosine kinase
+  pathway: Constitutive kinase signaling
+  disease: Chronic myeloid leukemia
+  mechanism: The Philadelphia chromosome translocation fuses BCR and ABL1, producing a kinase that's always switched on. Historically important as the first cancer with a drug (imatinib) designed to block the exact fusion protein causing it.
+  connection: Another fusion-driven kinase like ALK, and the textbook case for 'mechanism-targeted' drug design mentioned generally in oncology.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=ABL1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/abl1/
+- gene: JAK2
+  protein: Janus kinase 2
+  pathway: JAK-STAT signaling
+  disease: Polycythemia vera and other myeloproliferative neoplasms
+  mechanism: A single recurrent point mutation (V617F) locks the kinase in an active conformation, driving overproduction of blood cells independent of the growth factors that normally control it.
+  connection: Same 'always-on kinase' theme as BCR-ABL1 and ALK, but reached via a point mutation rather than a fusion, and it affects blood cell production rather than a solid tumor.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=JAK2
+  medlineplus_url: https://medlineplus.gov/genetics/gene/jak2/
+- gene: FLT3
+  protein: FMS-like tyrosine kinase 3
+  pathway: RTK signaling in hematopoietic cells
+  disease: Acute myeloid leukemia
+  mechanism: Internal tandem duplication mutations create a receptor that dimerizes and signals continuously, driving leukemic cell proliferation.
+  connection: Completes a set of five kinase-activation mechanisms across this list (point mutation, translocation, fusion, and duplication) - useful to compare all five side by side.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=FLT3
+  medlineplus_url: https://medlineplus.gov/genetics/gene/flt3/
+- gene: IDH1
+  protein: Isocitrate dehydrogenase 1, metabolic enzyme
+  pathway: Cellular metabolism (citric acid cycle)
+  disease: Glioma, acute myeloid leukemia
+  mechanism: Mutant IDH1 doesn't just lose its normal function - it gains a new one, producing an abnormal metabolite (2-hydroxyglutarate) that interferes with DNA and histone methylation, altering gene expression broadly.
+  connection: A second 'gain of a novel toxic function' gene alongside HBB's sickle mutation (week 11), but here the toxic product is a small metabolite that reshapes gene regulation rather than a misfolded protein.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=IDH1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/idh1/
+- gene: LDLR
+  protein: LDL receptor
+  pathway: Cholesterol uptake
+  disease: Familial hypercholesterolemia (autosomal dominant)
+  mechanism: Loss-of-function mutations impair LDL particle uptake into cells, leaving LDL cholesterol circulating in blood at high levels from birth and driving early atherosclerosis.
+  connection: First lipid-metabolism gene in this list - same general 'lose a receptor's function' logic as CFTR (week 7), but affecting cholesterol clearance rather than ion transport.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=LDLR
+  medlineplus_url: https://medlineplus.gov/genetics/gene/ldlr/
+- gene: PCSK9
+  protein: Protease
+  pathway: LDL receptor degradation regulation
+  disease: Familial hypercholesterolemia (gain-of-function) or naturally low cholesterol (loss-of-function)
+  mechanism: PCSK9 normally marks the LDL receptor for destruction. Gain-of-function mutations degrade more receptors, raising cholesterol; loss-of-function mutations leave more receptors on the cell surface, lowering it - now a drug target that mimics the loss-of-function state.
+  connection: Directly regulates LDLR from the previous week, and is a clean example of a gene where both gain- and loss-of-function variants exist with opposite clinical effects.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PCSK9
+  medlineplus_url: https://medlineplus.gov/genetics/gene/pcsk9/
+- gene: APOB
+  protein: Apolipoprotein B, structural component of LDL particles
+  pathway: Lipid transport
+  disease: Familial hypercholesterolemia
+  mechanism: Mutations impair the LDL particle's ability to bind the LDL receptor, so cholesterol clearance fails even though the receptor itself (LDLR) is normal - a ligand defect rather than a receptor defect.
+  connection: Same clinical presentation as LDLR and PCSK9 mutations, but the defect sits on the other side of the receptor-ligand interaction.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOB
+  medlineplus_url: https://medlineplus.gov/genetics/gene/apob/
+- gene: MYH7
+  protein: Beta-myosin heavy chain, cardiac muscle motor protein
+  pathway: Sarcomere contraction
+  disease: Hypertrophic cardiomyopathy (autosomal dominant)
+  mechanism: Mutant myosin molecules get incorporated into the sarcomere alongside normal ones, subtly altering contraction and triggering compensatory heart muscle thickening over years - a dominant-negative effect similar in logic to COL1A1's collagen defect.
+  connection: First cardiac structural-protein gene, echoing COL1A1's dominant-negative incorporation mechanism (week 9) in a different tissue.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYH7
+  medlineplus_url: https://medlineplus.gov/genetics/gene/myh7/
+- gene: TTN
+  protein: Titin, giant sarcomere structural protein
+  pathway: Sarcomere structure/elasticity
+  disease: Dilated cardiomyopathy
+  mechanism: Truncating mutations shorten this very large protein, weakening the structural scaffold of heart muscle cells and leading to a stretched, weakened heart rather than the thickened one seen with MYH7 mutations.
+  connection: Same sarcomere structure as MYH7 but the opposite structural outcome - thickening vs stretching - a useful pair to hold in mind together.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=TTN
+  medlineplus_url: https://medlineplus.gov/genetics/gene/ttn/
+- gene: SCN5A
+  protein: Cardiac sodium channel
+  pathway: Cardiac electrical conduction
+  disease: Long QT syndrome type 3, Brugada syndrome
+  mechanism: Mutations alter how the channel opens or closes, disrupting the precise timing of the heart's electrical cycle and predisposing to dangerous arrhythmias.
+  connection: Second channelopathy in the list after CFTR (week 7), but here the channel controls electrical timing rather than fluid transport.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN5A
+  medlineplus_url: https://medlineplus.gov/genetics/gene/scn5a/
+- gene: KCNQ1
+  protein: Potassium channel
+  pathway: Cardiac electrical repolarization
+  disease: Long QT syndrome type 1
+  mechanism: Loss-of-function mutations slow the potassium current that normally resets the heart's electrical cycle, prolonging the QT interval and raising arrhythmia risk.
+  connection: Same clinical syndrome (long QT) as SCN5A but the opposite ion - potassium efflux failing to reset the cycle rather than sodium influx mistiming it.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=KCNQ1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/kcnq1/
+- gene: APP
+  protein: Amyloid precursor protein
+  pathway: Amyloid processing
+  disease: Early-onset familial Alzheimer's disease
+  mechanism: Mutations near cleavage sites shift how enzymes cut this protein, increasing production of amyloid-beta fragments that aggregate into plaques.
+  connection: First neurodegenerative gene in the list where the mechanism is protein aggregation rather than repeat expansion (contrast with FMR1, week 12) or channel/structural failure.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=APP
+  medlineplus_url: https://medlineplus.gov/genetics/gene/app/
+- gene: PSEN1
+  protein: Presenilin 1, gamma-secretase catalytic subunit
+  pathway: Amyloid processing
+  disease: Early-onset familial Alzheimer's disease
+  mechanism: Mutations alter the enzyme that cuts APP, shifting production toward more aggregation-prone amyloid-beta fragments - same end result as APP mutations, reached via the enzyme instead of its substrate.
+  connection: Acts on the same pathway as APP from the previous week, illustrating how mutating either the substrate or the enzyme that processes it can converge on the same disease.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PSEN1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/psen1/
+- gene: APOE
+  protein: Apolipoprotein E, lipid transport protein
+  pathway: Lipid transport in the brain and periphery
+  disease: Late-onset Alzheimer's disease risk (the e4 allele raises risk; not a deterministic mutation)
+  mechanism: The e4 variant is a common, ordinary variant rather than a rare pathogenic mutation - it changes risk probability, not the near-certain inheritance seen with APP or PSEN1 mutations.
+  connection: Useful contrast to APP/PSEN1 - illustrates the difference between a high-penetrance disease-causing mutation and a common risk-modifying variant, a distinction worth generalizing beyond Alzheimer's.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOE
+  medlineplus_url: https://medlineplus.gov/genetics/gene/apoe/
+- gene: HTT
+  protein: Huntingtin
+  pathway: Neuronal protein function (incompletely understood), protein aggregation
+  disease: Huntington's disease (autosomal dominant)
+  mechanism: A CAG trinucleotide repeat expansion produces a huntingtin protein with an abnormally long polyglutamine tract that misfolds and aggregates, and longer expansions cause earlier onset.
+  connection: Second repeat-expansion disease after FMR1 (week 12), but contrasts in inheritance (dominant vs X-linked) and in mechanism (toxic protein aggregation vs gene silencing).
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=HTT
+  medlineplus_url: https://medlineplus.gov/genetics/gene/htt/
+- gene: SMN1
+  protein: Survival motor neuron protein
+  pathway: RNA splicing machinery assembly
+  disease: Spinal muscular atrophy (autosomal recessive)
+  mechanism: Loss of functional SMN1 would normally be fatal, but a nearly identical backup gene, SMN2, produces a small amount of functional protein - disease severity depends on how many SMN2 copies a person happens to carry.
+  connection: A rare example where a paralog gene partially compensates for the mutated one - worth remembering as a general genetics concept (gene redundancy softening a phenotype).
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=SMN1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/smn1/
+- gene: DMD
+  protein: Dystrophin
+  pathway: Muscle cell membrane structural support
+  disease: Duchenne muscular dystrophy (X-linked recessive)
+  mechanism: Dystrophin anchors the muscle cell's internal skeleton to its outer membrane. Its absence leaves the membrane vulnerable to tearing during contraction, and repeated micro-damage progressively destroys muscle tissue.
+  connection: A structural-protein disease like FBN1/COL1A1 (weeks 8-9), but this is the largest human gene, making it a good example of how gene size affects mutation detection and gene-therapy delivery.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=DMD
+  medlineplus_url: https://medlineplus.gov/genetics/gene/dmd/
+- gene: MECP2
+  protein: Methyl-CpG binding protein 2
+  pathway: Gene expression regulation (epigenetic reader)
+  disease: Rett syndrome (X-linked)
+  mechanism: MECP2 normally reads DNA methylation marks and helps silence genes appropriately. Its loss disrupts normal gene expression patterns broadly during brain development, rather than causing one single pathway defect.
+  connection: First gene in this list acting through epigenetic regulation rather than a single protein/pathway - a distinct category from everything covered so far.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=MECP2
+  medlineplus_url: https://medlineplus.gov/genetics/gene/mecp2/
+- gene: SOD1
+  protein: Superoxide dismutase 1, antioxidant enzyme
+  pathway: Oxidative stress defense
+  disease: Familial amyotrophic lateral sclerosis (a subset of ALS cases)
+  mechanism: Rather than simply losing its antioxidant function, mutant SOD1 misfolds and aggregates, and this aggregation itself appears to be toxic to motor neurons - a gain-of-toxic-function story similar to HTT's aggregation, in a different disease.
+  connection: Protein aggregation mechanism echoing HTT (this week's earlier entry) and APP, reinforcing aggregation as a recurring theme across unrelated neurodegenerative diseases.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=SOD1
+  medlineplus_url: https://medlineplus.gov/genetics/gene/sod1/
+- gene: GBA
+  protein: Glucocerebrosidase, lysosomal enzyme
+  pathway: Lysosomal lipid breakdown
+  disease: Gaucher disease (autosomal recessive); GBA variants also raise Parkinson's disease risk
+  mechanism: Enzyme deficiency causes fatty substrate to accumulate inside lysosomes, and this same accumulation is now understood to also increase risk of Parkinson's disease through effects on neuronal protein clearance.
+  connection: A single gene linked to two seemingly unrelated diseases (a rare recessive storage disorder and a common neurodegenerative disease), similar in spirit to HBB's two distinct disease outcomes (week 11).
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=GBA
+  medlineplus_url: https://medlineplus.gov/genetics/gene/gba/
+- gene: PRNP
+  protein: Prion protein
+  pathway: Protein misfolding / templated conformational change
+  disease: Creutzfeldt-Jakob disease, fatal familial insomnia
+  mechanism: A misfolded version of this normal protein can force other normal copies to adopt the same misfolded shape, propagating through brain tissue without needing any nucleic acid replication - a fundamentally different disease mechanism from every gene above.
+  connection: The only entry in this list where the disease-causing agent is a self-propagating protein conformation rather than a mutation acting through DNA, RNA, or a fixed abnormal protein product.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=PRNP
+  medlineplus_url: https://medlineplus.gov/genetics/gene/prnp/
+- gene: G6PD
+  protein: Glucose-6-phosphate dehydrogenase
+  pathway: Red blood cell antioxidant metabolism
+  disease: G6PD deficiency (X-linked) - hemolytic anemia triggered by oxidative stress (certain drugs, infections, fava beans)
+  mechanism: Deficient enzyme activity leaves red blood cells unable to handle oxidative stress, causing them to rupture under specific triggers rather than causing baseline illness - a gene-environment interaction rather than a constant phenotype.
+  connection: A clean example of a gene whose clinical effect depends on an environmental trigger, worth contrasting with genes like HTT or DMD whose effects are essentially unconditional.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=G6PD
+  medlineplus_url: https://medlineplus.gov/genetics/gene/g6pd/
+- gene: F5
+  protein: Coagulation factor V
+  pathway: Blood clotting cascade
+  disease: Factor V Leiden thrombophilia
+  mechanism: A single point mutation makes factor V resistant to being switched off by its normal inactivator, so clotting continues longer than it should - a subtle gain-of-function affecting the clotting cascade's shut-off mechanism rather than its activation.
+  connection: First coagulation-cascade gene in the list; contrasts with F8/VWF below where the defect is too little clotting rather than too much.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=F5
+  medlineplus_url: https://medlineplus.gov/genetics/gene/f5/
+- gene: F8
+  protein: Coagulation factor VIII
+  pathway: Blood clotting cascade
+  disease: Hemophilia A (X-linked recessive)
+  mechanism: Loss-of-function mutations impair a step required to amplify the clotting cascade, causing prolonged bleeding - the direct opposite clinical direction of F5 Leiden's excess clotting tendency.
+  connection: Same pathway as F5 (previous week) but opposite clinical direction, illustrating that one cascade can fail toward both too much and too little clotting depending on which gene and which type of mutation is involved.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=F8
+  medlineplus_url: https://medlineplus.gov/genetics/gene/f8/
+- gene: VWF
+  protein: Von Willebrand factor
+  pathway: Platelet adhesion and clotting cascade support
+  disease: Von Willebrand disease (most common inherited bleeding disorder)
+  mechanism: This protein normally helps platelets stick to damaged vessel walls and stabilizes factor VIII in circulation. Reduced or dysfunctional protein impairs the earliest step of clot formation, distinct from F8's defect further down the cascade.
+  connection: Completes the coagulation trio with F5 and F8 - together the three illustrate distinct failure points across one physiological cascade, a pattern worth applying when learning any other multi-step pathway.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=VWF
+  medlineplus_url: https://medlineplus.gov/genetics/gene/vwf/
+- gene: HFE
+  protein: HFE protein, iron regulation
+  pathway: Iron absorption regulation
+  disease: Hereditary hemochromatosis (autosomal recessive)
+  mechanism: Loss-of-function mutations impair the signal that normally tells the gut to reduce iron absorption when body iron is sufficient, leading to progressive iron overload and organ damage over decades.
+  connection: A metabolic-accumulation disease like PAH (week 10), but here the accumulating substance is a mineral absorbed from diet rather than a metabolite produced internally.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=HFE
+  medlineplus_url: https://medlineplus.gov/genetics/gene/hfe/
+- gene: ATP7B
+  protein: Copper-transporting ATPase
+  pathway: Copper metabolism and biliary excretion
+  disease: Wilson disease (autosomal recessive)
+  mechanism: Loss-of-function mutations impair copper excretion into bile, causing toxic copper accumulation in the liver and brain - directly analogous to HFE's iron overload, but for a different metal and a different transport step.
+  connection: A clean structural parallel to HFE (previous week) - two different metals, two different transport defects, same broad 'metal accumulates because excretion fails' logic.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATP7B
+  medlineplus_url: https://medlineplus.gov/genetics/gene/atp7b/
+- gene: CYP2D6
+  protein: Cytochrome P450 enzyme
+  pathway: Drug metabolism (phase I liver enzymes)
+  disease: Not a disease gene itself - determines how fast a person metabolizes many common drugs (antidepressants, opioids, some cancer drugs)
+  mechanism: Different inherited variants make this enzyme faster, slower, or completely absent, so the same drug dose can be inactive, normal, or dangerously overactive depending on which variant a person carries - the basis of clinical pharmacogenomic testing.
+  connection: Closes the year on a different note than every prior entry - this gene doesn't cause a disease, it determines drug response, a category worth knowing exists separately from Mendelian disease genes.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2D6
+  medlineplus_url: https://medlineplus.gov/genetics/gene/cyp2d6/
