@@ -81,6 +81,13 @@
   connection: Contrast with FBN1 - introduces the dominant-negative mechanism, different from FBN1's haploinsufficiency.
   genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=COL1A1
   medlineplus_url: https://medlineplus.gov/genetics/gene/col1a1/
+- gene: ANGPTL4
+  protein: Angiopoietin-like 4, secreted LPL inhibitor
+  pathway: Triglyceride metabolism (lipoprotein lipase regulation), fasting response
+  disease: No classic Mendelian disease; loss-of-function variants (e.g. E40K) are associated with lower triglycerides and reduced coronary artery disease risk
+  mechanism: ANGPTL4 is induced by fasting and inhibits lipoprotein lipase (LPL), the enzyme that clears triglycerides from blood, steering fatty acids toward tissues that need them. Carriers of loss-of-function variants have more active LPL, so lower triglycerides and less heart disease - which made ANGPTL4 a drug target.
+  connection: Reverses the TP53/RB1 pattern from weeks 1-2, where losing the gene causes disease - here, losing function is protective, which is the rationale for inhibiting it therapeutically.
+  genecards_url: https://www.genecards.org/cgi-bin/carddisp.pl?gene=ANGPTL4
 - gene: PAH
   protein: Phenylalanine hydroxylase
   pathway: Amino acid metabolism
